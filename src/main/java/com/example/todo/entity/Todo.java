@@ -1,6 +1,8 @@
 package com.example.todo.entity;
 
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
@@ -10,8 +12,11 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "tbl_todo")
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor(access = AccessLevel.PROTECTED) //JPA 스펙
+@Builder
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 public class Todo {
+
 
 
 
