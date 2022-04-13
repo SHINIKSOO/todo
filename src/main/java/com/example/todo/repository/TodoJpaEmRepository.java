@@ -72,11 +72,12 @@ public class TodoJpaEmRepository implements TodoRepository{
 
     @Override
     public void delete(Todo todo) {
+     deleteById(todo.getId());
 
     }
 
     @Override
     public void deleteById(Integer id) {
-
+    findById(id).ifPresent(em::remove);
     }
 }

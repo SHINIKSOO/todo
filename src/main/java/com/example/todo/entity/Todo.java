@@ -14,6 +14,7 @@ import javax.persistence.*;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
 @Setter
+@ToString
 public class Todo {
 
 
